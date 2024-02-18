@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+
+input[type=email],
+input[type=text],
+input[type=gender],
+input[type=password],
+input[type=radio],
+textarea {
+    text-transform: none;
+}
+
+::placeholder {
+    text-transform: capitalize;
+}
+
+/* login, signup, resetpassword section start*/
+
+.login,
+.signup,
+.pwdreset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(72, 60, 60, 0.8)
+}
+
+.login-form,
+.signup-form,
+.reset-form {
+    background-color: #918f87;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.login .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.login a,
+.signup a,
+.pwdreset a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login .btn,
+.signup .btn {
+    text-transform: capitalize;
+}
+
+.login a:hover,
+.signup a:hover,
+.pwdreset a:hover {
+    background-color: #fff;
+    color: #0a0a0a;
+}
+
+.signup .btn {
+    margin-right: 1rem;
+}
+
+@media(max-width:300px) {
+    .signup .btn {
+        margin-right: 0.5rem;
+    }
+}
+
+/* login, signup, reset password section end */
+
+/* spinner start */
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* spinner end */
+
+
+/* accountssection start */
+
+.accounts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #918f87;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+@media(max-width:600px) {
+
+    th,
+    td {
+        display: block;
+    }
+}
+
+/* accountssection end */
+
+/* header section start */
+
+.navbar-brand img {
+    height: 5rem;
+    width: 10rem;
+}
+
+.navbar-nav {
+    margin-right: 7rem;
+}
+
+.navbar-brand {
+    margin-left: 7rem;
+}
+
+.navbar a:hover {
+    background-color: #0a0a0a;
+}
+
+.dropdown-menu a:hover {
+    color: #fff;
+}
+
+@media(max-width:990px) {
+    .navbar-brand {
+        margin-left: 0
+    }
+}
+
+/* header section end */
+
+/* footer section start */
+
+.footer {
+    background-color: #0a0a0a;
+    color: #fff;
+    padding-top: 1rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/* footer section end */
+
+/* transaction section start */
+
+.transactions {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+@media print {
+
+    .transactions .btn,
+    nav,
+    .footer {
+        display: none;
+    }
+
+    .transactions tr,
+    .transactions th,
+    .transactions td,
+    .accounts tr,
+    .accounts td,
+    .accounts th {
+        border: 1px solid #0a0a0a
+    }
+
+    nav button {
+        display: none;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    .transactions,
+    .accounts {
+        min-height: auto;
+        background-color: #fff;
+        color: #0a0a0a;
+    }
+
+    .pagination {
+        display: none !important;
+    }
+}
+
+.transaction-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.transaction-form .mb-3 {
+    margin: 1rem;
+}
+
+@media(max-width:540px) {
+    .transaction-form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:420px) {
+    .transaction-form {
+        display: block;
+    }
+}
+
+/* transaction section end */
+
+/* alert start */
+.alert {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5000;
+}
+
+/* alert message end */
+
+/* change password section start */
+
+.cngpasswd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    z-index: 1000;
+}
+
+.pwdcng-form {
+    background-color: #918f87;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.cngpasswd .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* change password section end */
+
+/* money transfer section start */
+
+.tranfer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+@media(max-width:390px) {
+    .tranfer {
+        display: block;
+        text-align: center;
+    }
+
+    .tranfer .btn {
+        margin-right: auto
+    }
+}
+
+.deposit,
+.withdraw,
+.transfer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: rgba(151, 145, 145, 1);
+}
+
+.deposit-form,
+.withdraw-form,
+.transfer-form {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.deposit-form .mb-3,
+.withdraw-form .mb-3,
+.transfer-form .mb-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* transfer section end */
